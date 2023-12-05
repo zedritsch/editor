@@ -1,0 +1,3 @@
+# Build Settings
+disable_disk_cache: true
+exclude: [LICENSE, README.md]

@@ -1,0 +1,6 @@
+# Directories
+_site
+.vscode
+
+# Files
+.jekyll-metadata
