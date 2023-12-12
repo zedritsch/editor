@@ -9,7 +9,7 @@ function toggleFullscreen() {
 		return;
 	}
 
-	document.body.requestFullscreen();
+	document.getElementsByTagName("html")[0].requestFullscreen();
 	ICON.src = "img/close_fullscreen.svg";
 }
 
