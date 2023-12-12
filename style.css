@@ -5,85 +5,235 @@
 	--border: #2e3245;
 	--active: #cad3f5;
 	--inactive: #9299b3;
+	--accent: #b497d6;
 
+	/* Visibility */
+	color: var(--inactive);
 	font-size: 12px;
+	font-family: sans-serif;
 }
 
 body {
-	margin: 0;
+	/* Visibility */
+	display: flex;
+	background: var(--widget);
+
+	/* Size */
 	height: 100vh;
+	margin: 0;
 
-	display: flex;
+	/* Children */
 	flex-direction: column;
 }
 
-div {
-	flex: 1 1 0;
-
-	display: flex;
-}
-
-div>div {
-	flex-direction: column;
-}
-
-div>div>div {
-	flex-direction: row;
-}
-
-div>div>div>div {
-	flex-direction: column;
-	flex: 1 1 0;
-
-	border-top: 1px solid var(--border);
-	border-left: 1px solid var(--border);
-
-	background: var(--editor);
-}
-
+/* Titlebar */
 header {
-	flex: 0 0 40px;
-
+	/* Visibility */
 	display: flex;
-
 	background: var(--title);
+
+	/* Size */
+	flex: 0 0 40px;
+	border-bottom: 1px solid var(--border);
 }
 
-img {
-	margin: 8px 12px;
+#icon {
+	/* Visibility */
+	filter: none;
 
-	width: 24px;
-	height: 24px;
+	/* Size */
+	margin: 8px 12px;
+}
+
+button {
+	/* Visibility */
+	display: flex;
+	background: none;
+
+	/* Size */
+	border: 0;
+	padding: 0 8px;
+
+	/* Children */
+	text-align: left;
+	align-items: center;
+}
+
+header>button {
+	/* Size */
+	flex: 0 0 136px;
 }
 
 title {
-	flex: 2 1 0;
-
+	/* Visibility */
 	display: flex;
+
+	/* Size */
+	flex: 1 1 0;
+
+	/* Children */
 	align-items: center;
 	justify-content: center;
+}
 
+img {
+	/* Visibility */
+	filter: brightness(0) saturate(100%) invert(66%) sepia(9%) saturate(712%) hue-rotate(190deg) brightness(92%) contrast(89%);
+}
+
+header>div {
+	/* Size */
+	flex: 0 0 176px;
+
+	/* Children */
+	align-items: center;
+	justify-content: center;
+}
+
+div>a {
+	/* Size */
+	flex: 0 0 16px;
+	padding-top: 2px;
+	margin: 0 4px;
+}
+
+a {
+	/* Visibility */
+	display: flex;
+	background: none;
+
+	/* Size */
+	flex: 0 0 48px;
+	padding: 0;
+	border: 0;
+
+	/* Children */
+	align-items: center;
+	justify-content: center;
+}
+
+div {
+	/* Visibility */
+	display: flex;
+
+	/* Size */
+	flex: 1 1 0;
+}
+
+/* Navbar */
+nav {
+	/* Visibility */
+	display: flex;
+
+	/* Size */
+	flex: 0 0 48px;
+
+	/* Children */
+	flex-direction: column;
+}
+
+main {
+	/* Visibility */
+	display: flex;
+
+	/* Size */
+	flex: 1 1 0;
+
+	/* Children */
+	flex-direction: column;
+}
+
+/* Sidebar */
+aside {
+	/* Visibility */
+	display: flex;
+
+	/* Size */
+	flex: 0 0 272px;
+}
+
+/* Editor */
+section {
+	/* Visibility */
+	display: flex;
+
+	/* Size */
+	flex: 1 1 0;
+	border-left: 1px solid var(--border);
+
+	/* Children */
+	flex-direction: column;
+}
+
+section>div {
+	/* Size */
+	flex: 0 0 40px;
+}
+
+div>section>div>button>img {
+	/* Size */
+	margin-left: 4px;
+}
+
+article {
+	/* Size */
+	flex: 1 1 0;
+}
+
+div>section>article {
+	/* Visibility */
+	background: var(--editor);
+}
+
+/* Toolbar */
+main>section {
+	/* Size */
+	flex: 0 0 240px;
+	border-top: 1px solid var(--border);
+}
+
+/* Statusbar */
+footer {
+	/* Size */
+	flex: 0 0 32px;
+	border-top: 1px solid var(--border);
+}
+
+/* Tags */
+.hidden {
+	/* Visibility */
+	display: none;
+}
+
+.active {
+	/* Visibility */
 	color: var(--active);
 }
 
-nav {
-	flex: 0 0 48px;
-
-	border-top: 1px solid var(--border);
-	background: var(--widget);
+.active>img {
+	/* Visibility */
+	filter: brightness(0) saturate(100%) invert(84%) sepia(9%) saturate(757%) hue-rotate(192deg) brightness(100%) contrast(93%);
 }
 
-#sidebar {
-	flex: 0 0 324px;
+div>section>div>button.active {
+	/* Visibility */
+	background: var(--editor);
+
+	/* Size */
+	border-bottom: 1px solid var(--accent);
 }
 
-#toolbar {
-	flex: 0 0 240px;
+.blue {
+	/* Visibility */
+	filter: brightness(0) saturate(100%) invert(79%) sepia(57%) saturate(4197%) hue-rotate(192deg) brightness(106%) contrast(91%);
 }
 
-footer {
-	flex: 0 0 32px;
+.green {
+	/* Visibility */
+	filter: brightness(0) saturate(100%) invert(92%) sepia(15%) saturate(1007%) hue-rotate(40deg) brightness(90%) contrast(89%);
+}
 
-	border-top: 1px solid var(--border);
-	background: var(--widget);
+.red {
+	/* Visibility */
+	filter: brightness(0) saturate(100%) invert(86%) sepia(18%) saturate(4806%) hue-rotate(295deg) brightness(98%) contrast(90%);
 }

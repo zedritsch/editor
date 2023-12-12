@@ -7,26 +7,93 @@
 </head>
 
 <body>
+	<!-- Titlebar -->
 	<header>
-		<div>
-			<img src="favicon.ico">
-		</div>
+		<!-- Icon -->
+		<img id="icon" src="favicon.ico">
+		<!-- Project -->
+		<button>Untitled Project<div></div><img src="img/expand.svg"></button>
+		<!-- Branch -->
+		<button>Version Control<div></div><img src="img/expand.svg"></button>
+		<!-- Title -->
 		<title>Untitled - CI-Script Editor</title>
-		<div></div>
+		<!-- Debug -->
+		<div>
+			<a><img src="img/step_over.svg"></a>
+			<a><img src="img/step_into.svg"></a>
+			<a><img src="img/step_out.svg"></a>
+			<a><img class="blue" src="img/build.svg"></a>
+			<a><img class="green" src="img/start.svg"></a>
+			<a><img src="img/stop.svg"></a>
+		</div>
+		<!-- Controls -->
+		<a href="/" target="_blank"><img src="img/minimize.svg"></a>
+		<a href="javascript:toggleFullscreen()"><img id="maximize" src="img/open_fullscreen.svg"></a>
+		<a href="javascript:close()"><img src="img/close.svg"></a>
 	</header>
 	<div>
-		<nav></nav>
-		<div>
+		<!-- Navbar -->
+		<nav>
+			<!-- Explorer -->
+			<a class="active" href="javascript:switchSidebar(0)"><img src="img/explorer.svg"></a>
+			<!-- Debugger -->
+			<a href="javascript:switchSidebar(1)"><img src="img/debugger.svg"></a>
+			<!-- Spacer -->
+			<div></div>
+			<!-- Settings -->
+			<a href="javascript:switchSidebar(3)"><img src="img/settings.svg"></a>
+		</nav>
+		<main>
 			<div>
-				<div id="sidebar"></div>
-				<div></div>
+				<!-- Sidebar -->
+				<aside>
+					<!-- Explorer -->
+					<section></section>
+					<!-- Debugger -->
+					<section class="hidden"></section>
+					<!-- Spacer -->
+					<div class="hidden"></div>
+					<!-- Settings -->
+					<section class="hidden"></section>
+				</aside>
+				<section>
+					<!-- Tabs -->
+					<div>
+						<!-- Tab -->
+						<button class="active">Untitled<img src="img/close.svg"></button>
+						<!-- Spacer -->
+						<div></div>
+					</div>
+					<!-- Editor -->
+					<article>
+						<output></output>
+						<!--<textarea></textarea>-->
+					</article>
+				</section>
 			</div>
-			<div id="toolbar">
-				<div></div>
-			</div>
-		</div>
+			<!-- Toolbar -->
+			<section>
+				<!-- Controls -->
+				<div>
+					<button>Problems</button>
+					<button class="active">Console</button>
+				</div>
+				<!-- Output -->
+				<article>
+					<output></output>
+					<!--<textarea></textarea>-->
+				</article>
+			</section>
+		</main>
 	</div>
-	<footer></footer>
+	<!-- Statusbar -->
+	<footer>
+		<!-- Breadcrumbs -->
+		<div></div>
+		<!-- Status -->
+	</footer>
+
+	<script src="script.js"></script>
 </body>
 
 </html>
